@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
 // mongodb database connection 
 
 var mongodbUrl = "mongodb://admin:admin123*@ds123312.mlab.com:23312/cabbooking"
-// var mongodbUrl = "mongodb://localhost:27017/cab_db"
+//  var mongodbUrl = "mongodb://localhost:27017/cab_db"
 mongoose.connect(mongodbUrl, {
   useMongoClient: true
 });
