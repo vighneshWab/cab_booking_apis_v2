@@ -8,8 +8,9 @@ var mongoose = require('mongoose');
 
 
 // mongodb database connection 
+mongodb://<dbuser>:<dbpassword>@ds063715.mlab.com:63715/cabbooking
 
-var mongodbUrl = "mongodb://admin:admin123*@ds123312.mlab.com:23312/cabbooking"
+var mongodbUrl = "mongodb://admin:admin123*@ds063715.mlab.com:63715/cabbooking"
 //  var mongodbUrl = "mongodb://localhost:27017/cab_db"
 mongoose.connect(mongodbUrl, {
   useMongoClient: true
