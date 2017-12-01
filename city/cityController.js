@@ -1,5 +1,4 @@
 var cityModel = require('./cityModel.js');
-
 /**
  * cityController.js
  *
@@ -27,7 +26,7 @@ module.exports = {
      */
     show: function (req, res) {
         var id = req.params.id;
-        cityModel.findOne({_id: id}, function (err, city) {
+        cityModel.findOne({ _id: id }, function (err, city) {
             if (err) {
                 return res.status(500).json({
                     message: 'Error when getting city.',
@@ -48,7 +47,7 @@ module.exports = {
      */
     create: function (req, res) {
         var city = new cityModel({
-			name : req.body.name
+            name: req.body.name
 
         });
 
@@ -68,7 +67,7 @@ module.exports = {
      */
     update: function (req, res) {
         var id = req.params.id;
-        cityModel.findOne({_id: id}, function (err, city) {
+        cityModel.findOne({ _id: id }, function (err, city) {
             if (err) {
                 return res.status(500).json({
                     message: 'Error when getting city',
@@ -82,7 +81,7 @@ module.exports = {
             }
 
             city.name = req.body.name ? req.body.name : city.name;
-			
+
             city.save(function (err, city) {
                 if (err) {
                     return res.status(500).json({
@@ -110,5 +109,6 @@ module.exports = {
             }
             return res.status(204).json();
         });
-    }
+    },
+
 };

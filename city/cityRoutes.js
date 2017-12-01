@@ -27,4 +27,10 @@ router.put('/:id', cityController.update);
  */
 router.delete('/:id', cityController.remove);
 
+
+/*
+ * GET
+ */
+
+
 module.exports = router;
