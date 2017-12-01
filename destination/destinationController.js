@@ -118,7 +118,7 @@ module.exports = {
      */
     destination_by_CID: function (req, res) {
         var id = req.params.id;
-        destinationModel.findOne({ _id: id }, function (err, destination) {
+        destinationModel.find({ CID: id }, function (err, destination) {
             if (err) {
                 return res.status(500).json({
                     message: 'Error when getting destination.',
