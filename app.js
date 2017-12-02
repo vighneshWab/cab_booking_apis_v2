@@ -39,7 +39,16 @@ var services = require('./services/servicesRoutes')
 var city_services = require('./city_services/city_servicesRoutes')
 var c_charges = require('./c_charges/c_chargesRoutes')
 var destination = require('./destination/destinationRoutes');
-var os_charges = require('./os_charges/os_chargesRoutes')
+var os_charges = require('./os_charges/os_chargesRoutes');
+
+var c_order = require('./c_order/c_orderRoutes');
+var customer = require('./customer/customerRoutes');
+var driver = require('./driver/driverRoutes');
+var o_order = require('./o_order/o_orderRoutes');
+var order_status = require('./order_status/order_statusRoutes');
+var payment_status = require('./payment_status/payment_statusRoutes');
+var payment_type = require('./payment_type/payment_typeRoutes');
+
 
 var app = express();
 
@@ -66,6 +75,14 @@ app.use('/c_charges', c_charges);
 app.use('/destination', destination);
 app.use('/os_charges', os_charges);
 
+app.use('/c_order', c_order);
+app.use('/customer', customer);
+app.use('/driver', driver);
+app.use('/o_order', o_order);
+
+app.use('/order_status', order_status);
+app.use('/payment_status', payment_status);
+app.use('/payment_type', payment_type);
 
 
 // catch 404 and forward to error handler
